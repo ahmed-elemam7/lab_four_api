@@ -1,0 +1,173 @@
+{
+  "info": {
+    "_postman_id": "lab4a-api-collection",
+    "name": "Lab 4A API - Users & Posts",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Users - Index",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/users",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["users"]
+        }
+      }
+    },
+    {
+      "name": "Users - Show",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/users/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["users", ":id"]
+        }
+      }
+    },
+    {
+      "name": "Users - Create",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"user\": {\n    \"name\": \"Alice\",\n    \"email\": \"alice@example.com\"\n  }\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/users",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["users"]
+        }
+      }
+    },
+    {
+      "name": "Users - Update",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"user\": {\n    \"name\": \"Alice Updated\",\n    \"email\": \"alice.updated@example.com\"\n  }\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/users/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["users", ":id"]
+        }
+      }
+    },
+    {
+      "name": "Users - Delete",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/users/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["users", ":id"]
+        }
+      }
+    },
+    {
+      "name": "Posts - Index",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/posts",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["posts"]
+        }
+      }
+    },
+    {
+      "name": "Posts - Show",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/posts/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["posts", ":id"]
+        }
+      }
+    },
+    {
+      "name": "Posts - Create",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"post\": {\n    \"title\": \"First Post\",\n    \"body\": \"This is the body of the first post.\",\n    \"user_id\": 1\n  }\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/posts",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["posts"]
+        }
+      }
+    },
+    {
+      "name": "Posts - Update",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"post\": {\n    \"title\": \"First Post (edited)\",\n    \"body\": \"Edited body.\"\n  }\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/posts/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["posts", ":id"]
+        }
+      }
+    },
+    {
+      "name": "Posts - Delete",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/posts/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["posts", ":id"]
+        }
+      }
+    }
+  ]
+}
